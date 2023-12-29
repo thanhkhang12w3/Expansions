@@ -202,7 +202,7 @@ public class GriefPreventionExpansion extends PlaceholderExpansion implements Co
             Claim claim = DataS.getClaimAt(player.getLocation(), true, null);
             if (claim == null) {
                 return ChatColor.translateAlternateColorCodes('&',
-                        getString("translate.unclaimed", "Unclaimed!"));
+                        getString("translate.không ai ở đây cả", "Unclaimed!"));
             } else {
                 return String.valueOf(ChatColor.translateAlternateColorCodes('&', claim.getOwnerName()));
             }
@@ -211,7 +211,7 @@ public class GriefPreventionExpansion extends PlaceholderExpansion implements Co
             if (claim == null) {
                 return ChatColor.translateAlternateColorCodes('&',
                         getString("color.neutral", "")
-                                + getString("translate.unclaimed", "Unclaimed!"));
+                                + getString("translate.không ai ở đây cả", "Unclaimed!"));
             } else {
                 if (claim.allowAccess(player) == null){
                     //Trusted
